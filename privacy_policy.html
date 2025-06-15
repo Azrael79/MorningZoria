@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Morning Zoria LLC. Learn how we collect, use, and protect your personal information when you use our services.">
+    <meta name="keywords" content="privacy policy, data protection, Morning Zoria privacy, customer information">
+    <title>Privacy Policy | Morning Zoria LLC</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e1e8ed;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 8rem 0 3rem;
+            background: white;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            padding: 3rem 0;
+        }
+
+        .policy-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            margin: 1.5rem 0;
+        }
+
+        .contact-info {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .toc h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .toc a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .policy-content {
+                padding: 1.5rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">Morning Zoria</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>How we collect, use, and protect your personal information</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="last-updated">
+                <strong>Last Updated:</strong> June 15, 2025
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#information-we-collect">1. Information We Collect</a></li>
+                    <li><a href="#how-we-use">2. How We Use Your Information</a></li>
+                    <li><a href="#information-sharing">3. Information Sharing</a></li>
+                    <li><a href="#data-security">4. Data Security</a></li>
+                    <li><a href="#your-rights">5. Your Rights</a></li>
+                    <li><a href="#cookies">6. Cookies and Tracking</a></li>
+                    <li><a href="#children-privacy">7. Children's Privacy</a></li>
+                    <li><a href="#changes">8. Changes to This Policy</a></li>
+                    <li><a href="#contact-us">9. Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="policy-content">
+                <!-- Introduction -->
+                <div class="section">
+                    <p>At Morning Zoria LLC ("we," "our," or "us"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, share, and protect information when you visit our website or use our services.</p>
+                    
+                    <div class="highlight-box">
+                        <strong>Quick Summary:</strong> We only collect information necessary to provide our custom sewing and tool sharpening services. We never sell your personal data and only share it when required by law or with your explicit consent.
+                    </div>
+                </div>
+
+                <!-- Information We Collect -->
+                <div class="section" id="information-we-collect">
+                    <h2>1. Information We Collect</h2>
+                    
+                    <h3>Information You Provide Directly</h3>
+                    <ul>
+                        <li><strong>Contact Information:</strong> Name, email address, phone number, and mailing address</li>
+                        <li><strong>Project Details:</strong> Information about your custom sewing or sharpening service requests</li>
+                        <li><strong>Payment Information:</strong> Billing address and payment details (processed securely through third-party payment processors)</li>
+                        <li><strong>Communication Records:</strong> Records of our correspondence and service interactions</li>
+                        <li><strong>Preferences:</strong> Your service preferences, special requests, and feedback</li>
+                    </ul>
+
+                    <h3>Information Automatically Collected</h3>
+                    <ul>
+                        <li><strong>Website Usage:</strong> Pages visited, time spent on pages, and navigation patterns</li>
+                        <li><strong>Device Information:</strong> IP address, browser type, operating system, and device identifiers</li>
+                        <li><strong>Location Data:</strong> General geographic location (city/state level) for service delivery purposes</li>
+                    </ul>
+                </div>
+
+                <!-- How We Use Information -->
+                <div class="section" id="how-we-use">
+                    <h2>2. How We Use Your Information</h2>
+                    
+                    <p>We use your information for the following purposes:</p>
+                    
+                    <h3>Service Delivery</h3>
+                    <ul>
+                        <li>Processing and fulfilling your service requests</li>
+                        <li>Communicating about your projects and appointments</li>
+                        <li>Providing customer support and responding to inquiries</li>
+                        <li>Scheduling pickups and deliveries</li>
+                        <li>Processing payments and managing billing</li>
+                    </ul>
+
+                    <h3>Business Operations</h3>
+                    <ul>
+                        <li>Improving our services and customer experience</li>
+                        <li>Maintaining accurate business records</li>
+                        <li>Conducting quality assurance and training</li>
+                        <li>Analyzing usage patterns to enhance our website</li>
+                    </ul>
+
+                    <h3>Legal and Safety</h3>
+                    <ul>
+                        <li>Complying with legal obligations and regulations</li>
+                        <li>Protecting our rights and property</li>
+                        <li>Ensuring the safety and security of our services</li>
+                    </ul>
+                </div>
+
+                <!-- Information Sharing -->
+                <div class="section" id="information-sharing">
+                    <h2>3. Information Sharing</h2>
+                    
+                    <p>We do not sell, rent, or trade your personal information. We may share your information only in the following limited circumstances:</p>
+                    
+                    <h3>Service Providers</h3>
+                    <ul>
+                        <li><strong>Payment Processors:</strong> To process payments securely</li>
+                        <li><strong>Delivery Services:</strong> For pickup and delivery coordination (name and address only)</li>
+                        <li><strong>Technology Providers:</strong> For website hosting and maintenance</li>
+                    </ul>
+
+                    <h3>Legal Requirements</h3>
+                    <ul>
+                        <li>When required by law, court order, or government request</li>
+                        <li>To protect our legal rights or defend against claims</li>
+                        <li>In case of emergency to protect safety</li>
+                    </ul>
+
+                    <h3>Business Transfers</h3>
+                    <p>If our business is sold or merged, your information may be transferred to the new owner under the same privacy protections.</p>
+                </div>
+
+                <!-- Data Security -->
+                <div class="section" id="data-security">
+                    <h2>4. Data Security</h2>
+                    
+                    <p>We implement appropriate security measures to protect your personal information:</p>
+                    
+                    <ul>
+                        <li><strong>Encryption:</strong> All sensitive data is encrypted in transit and at rest</li>
+                        <li><strong>Access Controls:</strong> Limited access to personal information on a need-to-know basis</li>
+                        <li><strong>Secure Storage:</strong> Customer records are stored in locked filing cabinets and secure digital systems</li>
+                        <li><strong>Regular Updates:</strong> We keep our security systems and practices up to date</li>
+                        <li><strong>Employee Training:</strong> Our team is trained on privacy and security best practices</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <strong>Important:</strong> While we implement strong security measures, no system is 100% secure. We cannot guarantee absolute security but are committed to protecting your information using industry-standard practices.
+                    </div>
+                </div>
+
+                <!-- Your Rights -->
+                <div class="section" id="your-rights">
+                    <h2>5. Your Rights</h2>
+                    
+                    <p>You have the following rights regarding your personal information:</p>
+                    
+                    <h3>Access and Correction</h3>
+                    <ul>
+                        <li>Request access to the personal information we have about you</li>
+                        <li>Request correction of inaccurate or incomplete information</li>
+                        <li>Update your contact preferences at any time</li>
+                    </ul>
+
+                    <h3>Data Control</h3>
+                    <ul>
+                        <li>Request deletion of your personal information (subject to legal requirements)</li>
+                        <li>Object to certain uses of your information</li>
+                        <li>Request a copy of your information in a portable format</li>
+                    </ul>
+
+                    <h3>Communication Preferences</h3>
+                    <ul>
+                        <li>Opt out of marketing communications (service-related communications may continue)</li>
+                        <li>Choose how we contact you about your projects</li>
+                    </ul>
+
+                    <p>To exercise these rights, please contact us using the information provided at the end of this policy.</p>
+                </div>
+
+                <!-- Cookies and Tracking -->
+                <div class="section" id="cookies">
+                    <h2>6. Cookies and Tracking</h2>
+                    
+                    <p>Our website uses cookies and similar technologies to enhance your experience:</p>
+                    
+                    <h3>Types of Cookies We Use</h3>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> Required for basic website functionality</li>
+                        <li><strong>Performance Cookies:</strong> Help us understand how visitors use our site</li>
+                        <li><strong>Functional Cookies:</strong> Remember your preferences and settings</li>
+                    </ul>
+
+                    <h3>Managing Cookies</h3>
+                    <p>You can control cookies through your browser settings. However, disabling certain cookies may affect website functionality. We do not use tracking cookies for advertising purposes.</p>
+                </div>
+
+                <!-- Children's Privacy -->
+                <div class="section" id="children-privacy">
+                    <h2>7. Children's Privacy</h2>
+                    
+                    <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will take steps to delete it promptly.</p>
+                    
+                    <p>If you believe we have collected information from a child under 13, please contact us immediately.</p>
+                </div>
+
+                <!-- Changes to Policy -->
+                <div class="section" id="changes">
+                    <h2>8. Changes to This Policy</h2>
+                    
+                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we make changes:</p>
+                    
+                    <ul>
+                        <li>We will update the "Last Updated" date at the top of this policy</li>
+                        <li>For significant changes, we will notify you by email or website notice</li>
+                        <li>Your continued use of our services constitutes acceptance of the updated policy</li>
+                    </ul>
+
+                    <p>We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="section" id="contact-us">
+                    <h2>9. Contact Us</h2>
+                    
+                    <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact us:</p>
+                </div>
+            </div>
+
+            <!-- Contact Information Box -->
+            <div class="contact-info">
+                <h3>Privacy Contact Information</h3>
+                <p><strong>Morning Zoria LLC</strong><br>
+                Email: <a href="mailto:privacy@morningzoria.com">privacy@morningzoria.com</a><br>
+                Phone: <a href="tel:+15551234567">(555) 123-4567</a><br>
+                Response Time: We will respond to privacy requests within 30 days</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Morning Zoria LLC</h3>
+                <p>Combining creativity with practicality through expert craftsmanship and precision tool sharpening since 2020.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a><br>
+                   <a href="about.html">About Us</a><br>
+                   <a href="services.html">Services</a><br>
+                   <a href="gallery.html">Gallery</a><br>
+                   <a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <p><a href="privacy.html">Privacy Policy</a><br>
+                   <a href="terms.html">Terms of Service</a><br>
+                   <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@morningzoria.com<br>Phone: (555) 123-4567<br>By appointment only</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Morning Zoria LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', function() {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                navLinks.style.borderRadius = '0 0 10px 10px';
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Smooth scrolling for table of contents
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Security measures
+        (function() {
+            'use strict';
+            
+            window.addEventListener('error', function(e) {
+                console.error('Script error detected:', e.error);
+            });
+        })();
+    </script>
+</body>
+</html>

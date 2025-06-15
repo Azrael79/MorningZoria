@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for Morning Zoria LLC. Read our service terms, policies, and customer agreements for custom sewing and tool sharpening services.">
+    <meta name="keywords" content="terms of service, service agreement, Morning Zoria terms, customer agreement, service policies">
+    <title>Terms of Service | Morning Zoria LLC</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e1e8ed;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 8rem 0 3rem;
+            background: white;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            padding: 3rem 0;
+        }
+
+        .terms-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            margin: 1.5rem 0;
+        }
+
+        .important-notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .toc h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .toc a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .terms-content {
+                padding: 1.5rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">Morning Zoria</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Our service agreement and policies for custom sewing and tool sharpening services</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="last-updated">
+                <strong>Last Updated:</strong> June 15, 2025
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                    <li><a href="#services">2. Our Services</a></li>
+                    <li><a href="#orders-quotes">3. Orders and Quotes</a></li>
+                    <li><a href="#payment">4. Payment Terms</a></li>
+                    <li><a href="#materials">5. Materials and Customer Property</a></li>
+                    <li><a href="#warranties">6. Warranties and Guarantees</a></li>
+                    <li><a href="#liability">7. Limitation of Liability</a></li>
+                    <li><a href="#customer-responsibilities">8. Customer Responsibilities</a></li>
+                    <li><a href="#intellectual-property">9. Intellectual Property</a></li>
+                    <li><a href="#cancellation">10. Cancellation and Returns</a></li>
+                    <li><a href="#dispute-resolution">11. Dispute Resolution</a></li>
+                    <li><a href="#general">12. General Provisions</a></li>
+                </ul>
+            </div>
+
+            <div class="terms-content">
+                <!-- Introduction -->
+                <div class="section">
+                    <p>Welcome to Morning Zoria LLC. These Terms of Service ("Terms") govern your use of our website and services. By engaging our services or using our website, you agree to be bound by these Terms.</p>
+                    
+                    <div class="important-notice">
+                        <strong>Important:</strong> Please read these Terms carefully. They contain important information about your rights and obligations, including limitations on liability and dispute resolution procedures.
+                    </div>
+                </div>
+
+                <!-- Acceptance of Terms -->
+                <div class="section" id="acceptance">
+                    <h2>1. Acceptance of Terms</h2>
+                    
+                    <p>By accessing our website, requesting a quote, or engaging our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, please do not use our services.</p>
+                    
+                    <h3>Eligibility</h3>
+                    <ul>
+                        <li>You must be at least 18 years old to engage our services</li>
+                        <li>You must have the legal authority to enter into agreements</li>
+                        <li>You represent that all information you provide is accurate and complete</li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="section" id="services">
+                    <h2>2. Our Services</h2>
+                    
+                    <h3>Custom Sewing Services</h3>
+                    <ul>
+                        <li>Custom clothing design and creation</li>
+                        <li>Alterations and repairs</li>
+                        <li>Handmade bags and accessories</li>
+                        <li>Quilts and home textiles</li>
+                    </ul>
+
+                    <h3>Tool Sharpening Services</h3>
+                    <ul>
+                        <li>Kitchen knife sharpening</li>
+                        <li>Scissors and shears sharpening</li>
+                        <li>Garden tool sharpening</li>
+                        <li>Specialty tool restoration</li>
+                    </ul>
+
+                    <h3>Service Limitations</h3>
+                    <p>We reserve the right to refuse service for any reason, including but not limited to projects that are beyond our capabilities, inappropriate requests, or safety concerns.</p>
+                </div>
+
+                <!-- Orders and Quotes -->
+                <div class="section" id="orders-quotes">
+                    <h2>3. Orders and Quotes</h2>
+                    
+                    <h3>Quote Process</h3>
+                    <ul>
+                        <li>All quotes are estimates based on information provided</li>
+                        <li>Quotes are valid for 30 days unless otherwise specified</li>
+                        <li>Final pricing may vary if project scope changes</li>
+                        <li>We will notify you of any significant price changes before proceeding</li>
+                    </ul>
+
+                    <h3>Order Acceptance</h3>
+                    <ul>
+                        <li>Orders are confirmed when we accept your deposit</li>
+                        <li>We may request additional information or clarification before acceptance</li>
+                        <li>Acceptance creates a binding service agreement</li>
+                    </ul>
+
+                    <h3>Project Timeline</h3>
+                    <ul>
+                        <li>Timelines are estimates and may vary due to complexity or unforeseen circumstances</li>
+                        <li>Rush orders may be available for additional fees</li>
+                        <li>We will keep you informed of any significant delays</li>
+                    </ul>
+                </div>
+
+                <!-- Payment Terms -->
+                <div class="section" id="payment">
+                    <h2>4. Payment Terms</h2>
+                    
+                    <h3>Payment Schedule</h3>
+                    <ul>
+                        <li><strong>Custom Sewing:</strong> 50% deposit required, balance due upon completion</li>
+                        <li><strong>Tool Sharpening:</strong> Payment due upon pickup/delivery</li>
+                        <li><strong>Rush Orders:</strong> Full payment may be required in advance</li>
+                    </ul>
+
+                    <h3>Accepted Payment Methods</h3>
+                    <ul>
+                        <li>Cash</li>
+                        <li>Check (with valid ID)</li>
+                        <li>Major credit cards (Visa, Mastercard, American Express)</li>
+                    </ul>
+
+                    <h3>Late Payment</h3>
+                    <ul>
+                        <li>Balance payments are due within 30 days of completion</li>
+                        <li>Late fees of 1.5% per month may apply to overdue balances</li>
+                        <li>We reserve the right to retain items until payment is received</li>
+                    </ul>
+                </div>
+
+                <!-- Materials and Customer Property -->
+                <div class="section" id="materials">
+                    <h2>5. Materials and Customer Property</h2>
+                    
+                    <h3>Customer-Provided Materials</h3>
+                    <ul>
+                        <li>You are responsible for the quality and suitability of materials you provide</li>
+                        <li>We are not liable for defects in customer-provided materials</li>
+                        <li>Additional charges may apply if materials prove unsuitable during work</li>
+                    </ul>
+
+                    <h3>Our Materials</h3>
+                    <ul>
+                        <li>We source high-quality materials from reputable suppliers</li>
+                        <li>Material costs are included in quoted prices unless otherwise specified</li>
+                        <li>We may suggest material substitutions for quality or availability reasons</li>
+                    </ul>
+
+                    <h3>Care of Customer Property</h3>
+                    <ul>
+                        <li>We exercise reasonable care in handling your items</li>
+                        <li>Items are held at your risk for loss, theft, or damage beyond our control</li>
+                        <li>Insurance coverage is limited to our business liability policy</li>
+                        <li>Items not collected within 90 days may be disposed of after written notice</li>
+                    </ul>
+                </div>
+
+                <!-- Warranties and Guarantees -->
+                <div class="section" id="warranties">
+                    <h2>6. Warranties and Guarantees</h2>
+                    
+                    <h3>Workmanship Guarantee</h3>
+                    <ul>
+                        <li>We guarantee our workmanship for 90 days from completion</li>
+                        <li>We will repair or redo work that fails due to our workmanship defects</li>
+                        <li>This warranty does not cover normal wear, misuse, or damage from customer actions</li>
+                    </ul>
+
+                    <h3>Sharpening Services</h3>
+                    <ul>
+                        <li>Sharpened tools are guaranteed for proper edge retention under normal use</li>
+                        <li>Free re-sharpening within 30 days if edge fails due to our service</li>
+                        <li>Warranty void for damaged, abused, or improperly used tools</li>
+                    </ul>
+
+                    <h3>Disclaimer</h3>
+                    <p>EXCEPT AS EXPRESSLY STATED, ALL SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p>
+                </div>
+
+                <!-- Limitation of Liability -->
+                <div class="section" id="liability">
+                    <h2>7. Limitation of Liability</h2>
+                    
+                    <div class="important-notice">
+                        <strong>Important Limitation:</strong> Our total liability for any claim is limited to the amount you paid for the specific service in question.
+                    </div>
+
+                    <h3>Liability Limitations</h3>
+                    <ul>
+                        <li>Our liability is limited to the cost of the specific service performed</li>
+                        <li>We are not liable for consequential, incidental, or punitive damages</li>
+                        <li>We are not liable for lost profits, business interruption, or opportunity costs</li>
+                        <li>Time limits apply to all claims - see dispute resolution section</li>
+                    </ul>
+
+                    <h3>Exceptions</h3>
+                    <p>These limitations do not apply to damages caused by our gross negligence, willful misconduct, or where prohibited by law.</p>
+                </div>
+
+                <!-- Customer Responsibilities -->
+                <div class="section" id="customer-responsibilities">
+                    <h2>8. Customer Responsibilities</h2>
+                    
+                    <h3>Information and Communication</h3>
+                    <ul>
+                        <li>Provide accurate and complete project information</li>
+                        <li>Respond promptly to requests for clarification</li>
+                        <li>Notify us immediately of any concerns or changes</li>
+                        <li>Be available for fittings and consultations as scheduled</li>
+                    </ul>
+
+                    <h3>Property Care</h3>
+                    <ul>
+                        <li>Ensure items for sharpening are clean and safe to handle</li>
+                        <li>Disclose any damage, modifications, or special considerations</li>
+                        <li>Follow our care instructions for completed work</li>
+                    </ul>
+
+                    <h3>Prohibited Items</h3>
+                    <p>We do not accept items that are illegal, dangerous, contaminated, or of questionable ownership.</p>
+                </div>
+
+                <!-- Intellectual Property -->
+                <div class="section" id="intellectual-property">
+                    <h2>9. Intellectual Property</h2>
+                    
+                    <h3>Your Rights</h3>
+                    <ul>
+                        <li>You retain ownership of your completed custom items</li>
+                        <li>You may request design modifications during the creation process</li>
+                        <li>We will not reproduce your custom designs for other customers without permission</li>
+                    </ul>
+
+                    <h3>Our Rights</h3>
+                    <ul>
+                        <li>We retain rights to our techniques, processes, and general design knowledge</li>
+                        <li>We may photograph completed work for portfolio and marketing purposes unless you object</li>
+                        <li>We may use general design concepts (not your specific design) for future projects</li>
+                    </ul>
+                </div>
+
+                <!-- Cancellation and Returns -->
+                <div class="section" id="cancellation">
+                    <h2>10. Cancellation and Returns</h2>
+                    
+                    <h3>Customer Cancellation</h3>
+                    <ul>
+                        <li><strong>Before work begins:</strong> Full refund minus processing fees</li>
+                        <li><strong>After work begins:</strong> Refund of unused portion minus costs incurred</li>
+                        <li><strong>Custom items:</strong> No refund once work is substantially complete</li>
+                        <li><strong>Sharpening services:</strong> Cancellation before pickup incurs no charge</li>
+                    </ul>
+
+                    <h3>Our Cancellation Rights</h3>
+                    <p>We may cancel orders if materials prove unsuitable, if project requirements change substantially, or for safety reasons. Full refund will be provided for our cancellations.</p>
+
+                    <h3>Returns and Exchanges</h3>
+                    <ul>
+                        <li>Custom items are generally not returnable due to their personalized nature</li>
+                        <li>We will remake items that do not meet agreed specifications</li>
+                        <li>Sharpening services are not returnable once performed</li>
+                    </ul>
+                </div>
+
+                <!-- Dispute Resolution -->
+                <div class="section" id="dispute-resolution">
+                    <h2>11. Dispute Resolution</h2>
+                    
+                    <h3>Direct Communication</h3>
+                    <p>We encourage direct communication to resolve any issues. Contact us immediately if you have concerns about our service.</p>
+
+                    <h3>Time Limits</h3>
+                    <ul>
+                        <li>Claims must be made within 30 days of service completion</li>
+                        <li>Hidden defects must be reported within 90 days of discovery</li>
+                        <li>Failure to report issues timely may void remedies</li>
+                    </ul>
+
+                    <h3>Mediation and Arbitration</h3>
+                    <p>If direct communication fails, disputes will be resolved through binding arbitration under the rules of the American Arbitration Association. Each party bears their own costs except as determined by the arbitrator.</p>
+
+                    <h3>Governing Law</h3>
+                    <p>These Terms are governed by the laws of [Your State], without regard to conflict of law principles.</p>
+                </div>
+
+                <!-- General Provisions -->
+                <div class="section" id="general">
+                    <h2>12. General Provisions</h2>
+                    
+                    <h3>Changes to Terms</h3>
+                    <ul>
+                        <li>We may update these Terms from time to time</li>
+                        <li>Updated Terms apply to new orders after the effective date</li>
+                        <li>Existing orders remain under the Terms in effect when ordered</li>
+                    </ul>
+
+                    <h3>Severability</h3>
+                    <p>If any provision is found invalid, the remaining Terms continue in full force and effect.</p>
+
+                    <h3>Entire Agreement</h3>
+                    <p>These Terms, along with our Privacy Policy and any written service agreements, constitute the entire agreement between us.</p>
+
+                    <h3>Force Majeure</h3>
+                    <p>We are not liable for delays or failures due to circumstances beyond our reasonable control, including natural disasters, emergencies, or supplier issues.</p>
+                </div>
+            </div>
+
+            <!-- Contact Information Box -->
+            <div class="contact-info">
+                <h3>Questions About These Terms?</h3>
+                <p><strong>Morning Zoria LLC</strong><br>
+                Email: <a href="mailto:legal@morningzoria.com">legal@morningzoria.com</a><br>
+                Phone: <a href="tel:+15551234567">(555) 123-4567</a><br>
+                We're happy to clarify any questions about our service terms</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Morning Zoria LLC</h3>
+                <p>Combining creativity with practicality through expert craftsmanship and precision tool sharpening since 2020.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a><br>
+                   <a href="about.html">About Us</a><br>
+                   <a href="services.html">Services</a><br>
+                   <a href="gallery.html">Gallery</a><br>
+                   <a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <p><a href="privacy.html">Privacy Policy</a><br>
+                   <a href="terms.html">Terms of Service</a><br>
+                   <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@morningzoria.com<br>Phone: (555) 123-4567<br>By appointment only</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Morning Zoria LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', function() {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                navLinks.style.borderRadius = '0 0 10px 10px';
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Smooth scrolling for table of contents
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Security measures
+        (function() {
+            'use strict';
+            
+            window.addEventListener('error', function(e) {
+                console.error('Script error detected:', e.error);
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Morning Zoria LLC for custom sewing, alterations, and professional tool sharpening services. Get a quote or schedule your appointment today.">
+    <meta name="keywords" content="contact Morning Zoria, quote request, appointment scheduling, custom sewing quote, knife sharpening service">
+    <title>Contact Us | Morning Zoria - Get a Quote Today</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e1e8ed;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+            --success-color: #27ae60;
+            --error-color: #e74c3c;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 5rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .form-subtitle {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .required {
+            color: var(--error-color);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group.invalid input,
+        .form-group.invalid select,
+        .form-group.invalid textarea {
+            border-color: var(--error-color);
+            background-color: rgba(231, 76, 60, 0.05);
+        }
+
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-group.invalid .error-message {
+            display: block;
+        }
+
+        .character-count {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            text-align: right;
+            margin-top: 0.25rem;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+            width: 100%;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-primary:disabled {
+            background: var(--text-light);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error-message-global {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Contact Info */
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        /* Business Hours */
+        .hours-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .hours-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .hours-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .hours-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hours-list {
+            list-style: none;
+            color: var(--text-light);
+        }
+
+        .hours-list li {
+            padding: 0.25rem 0;
+        }
+
+        .current-status {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .status-open {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-closed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 4rem 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: white;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .faq-answer.active {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 200px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-form-section {
+                padding: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading states */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">Morning Zoria</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Ready to start your project or schedule your sharpening service? We'd love to hear from you!</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Contact Form & Info -->
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2 class="form-title">Get a Quote</h2>
+                    <p class="form-subtitle">Tell us about your project and we'll get back to you within 24 hours.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required maxlength="50">
+                                <div class="error-message">Please enter your first name</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required maxlength="50">
+                                <div class="error-message">Please enter your last name</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required maxlength="100">
+                                <div class="error-message">Please enter a valid email address</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" maxlength="20" placeholder="(555) 123-4567">
+                                <div class="error-message">Please enter a valid phone number</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="serviceType">Service Type <span class="required">*</span></label>
+                            <select id="serviceType" name="serviceType" required>
+                                <option value="">Select a service</option>
+                                <option value="custom-clothing">Custom Clothing</option>
+                                <option value="alterations">Alterations & Repairs</option>
+                                <option value="bags">Handmade Bags & Accessories</option>
+                                <option value="quilts">Quilts & Home Textiles</option>
+                                <option value="knife-sharpening">Knife Sharpening</option>
+                                <option value="scissor-sharpening">Scissor Sharpening</option>
+                                <option value="garden-tools">Garden Tool Sharpening</option>
+                                <option value="multiple">Multiple Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message">Please select a service type</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Estimated Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range (optional)</option>
+                                <option value="under-50">Under $50</option>
+                                <option value="50-100">$50 - $100</option>
+                                <option value="100-250">$100 - $250</option>
+                                <option value="250-500">$250 - $500</option>
+                                <option value="500-plus">$500+</option>
+                                <option value="discuss">Prefer to discuss</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Preferred Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline (optional)</option>
+                                <option value="asap">As soon as possible</option>
+                                <option value="1-week">Within 1 week</option>
+                                <option value="2-weeks">Within 2 weeks</option>
+                                <option value="1-month">Within 1 month</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details <span class="required">*</span></label>
+                            <textarea id="message" name="message" required maxlength="1000" placeholder="Please describe your project in detail. For sewing projects, include information about style, materials, measurements, etc. For sharpening services, describe the tools and their current condition."></textarea>
+                            <div class="character-count">0 / 1000 characters</div>
+                            <div class="error-message">Please provide project details (minimum 20 characters)</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="newsletter" name="newsletter" style="margin-right: 0.5rem;">
+                                I'd like to receive updates about new services and special offers
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="spinner" style="display: none;"></span>
+                        </button>
+                        
+                        <div class="success-message" id="successMessage">
+                            <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you within 24 hours.
+                        </div>
+                        
+                        <div class="error-message-global" id="errorMessage">
+                            <strong>Sorry!</strong> There was an error sending your message. Please try again or contact us directly.
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-section">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>Get in touch via email for quotes and questions</p>
+                            <a href="mailto:info@morningzoria.com">info@morningzoria.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>Speak with us directly about your project</p>
+                            <a href="tel:+15551234567">(555) 123-4567</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Visit Our Studio</h3>
+                            <p>By appointment only</p>
+                            <p>Local pickup and delivery available</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h3>Response Time</h3>
+                            <p>We typically respond to inquiries within 24 hours</p>
+                            <p>Rush jobs may be available for additional fee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Business Hours -->
+        <section class="hours-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Business Hours</h2>
+                    <p>When we're available for consultations, pickups, and deliveries</p>
+                </div>
+                
+                <div class="hours-grid">
+                    <div class="hours-card">
+                        <div class="hours-icon">🕐</div>
+                        <h3>Studio Hours</h3>
+                        <ul class="hours-list">
+                            <li><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</li>
+                            <li><strong>Saturday:</strong> 10:00 AM - 4:00 PM</li>
+                            <li><strong>Sunday:</strong> Closed</li>
+                        </ul>
+                        <div class="current-status status-open" id="studioStatus">Currently Open</div>
+                    </div>
+                    
+                    <div class="hours-card">
+                        <div class="hours-icon">🚚</div>
+                        <h3>Pickup & Delivery</h3>
+                        <ul class="hours-list">
+                            <li><strong>Tuesday & Thursday:</strong> 10:00 AM - 5:00 PM</li>
+                            <li><strong>Saturday:</strong> 11:00 AM - 3:00 PM</li>
+                            <li>Free delivery within 10 miles</li>
+                        </ul>
+                        <div class="current-status status-closed">Next Available: Tuesday</div>
+                    </div>
+                    
+                    <div class="hours-card">
+                        <div class="hours-icon">📅</div>
+                        <h3>Appointments</h3>
+                        <ul class="hours-list">
+                            <li>Consultations by appointment only</li>
+                            <li>Evening appointments available</li>
+                            <li>24-48 hour notice preferred</li>
+                        </ul>
+                        <div class="current-status status-open">Accepting Bookings</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Quick answers to common questions about our services</p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question">How do I get a quote for custom sewing?</button>
+                        <div class="faq-answer">
+                            <p>Fill out our contact form with detailed information about your project, or email us photos and descriptions. We'll provide a detailed quote within 24-48 hours based on complexity, materials, and timeline.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">Do you offer pickup and delivery?</button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer free pickup and delivery within 10 miles for orders over $50. For sharpening services, we can pick up your tools and return them sharp and ready to use.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">What payment methods do you accept?</button>
+                        <div class="faq-answer">
+                            <p>We accept cash, check, and major credit cards. For larger projects, we typically require a 50% deposit to begin work, with the balance due upon completion.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">Can I see examples of your work?</button>
+                        <div class="faq-answer">
+                            <p>Absolutely! Check out our Gallery page to see examples of our custom clothing, bags, quilts, and before/after photos of our sharpening work.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">How far in advance should I book?</button>
+                        <div class="faq-answer">
+                            <p>For custom sewing projects, we recommend booking 2-6 weeks in advance depending on complexity. Sharpening services are usually available within 3-5 business days.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">Do you work with my materials?</button>
+                        <div class="faq-answer">
+                            <p>Yes! You can provide your own fabric and materials, or we can source high-quality materials for your project. We'll discuss options during your consultation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Morning Zoria LLC</h3>
+                    <p>Combining creativity with practicality through expert craftsmanship and precision tool sharpening since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="index.html">Home</a><br>
+                       <a href="about.html">About Us</a><br>
+                       <a href="services.html">Services</a><br>
+                       <a href="gallery.html">Gallery</a><br>
+                       <a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p>Custom Clothing<br>Handmade Bags<br>Quilts & Textiles<br>Knife Sharpening<br>Scissor Sharpening</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@morningzoria.com<br>Phone: (555) 123-4567<br>By appointment only</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Morning Zoria LLC. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', function() {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                navLinks.style.borderRadius = '0 0 10px 10px';
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // FAQ functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isActive = this.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Character counter for message field
+        const messageField = document.getElementById('message');
+        const charCount = document.querySelector('.character-count');
+        
+        messageField.addEventListener('input', function() {
+            const length = this.value.length;
+            charCount.textContent = `${length} / 1000 characters`;
+            
+            if (length > 950) {
+                charCount.style.color = 'var(--error-color)';
+            } else if (length > 800) {
+                charCount.style.color = 'var(--accent-color)';
+            } else {
+                charCount.style.color = 'var(--text-light)';
+            }
+        });
+
+        // Form validation and submission
+        (function() {
+            'use strict';
+            
+            // Input sanitization function
+            function sanitizeInput(input) {
+                const div = document.createElement('div');
+                div.textContent = input;
+                return div.innerHTML;
+            }
+
+            // Email validation
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            // Phone validation
+            function isValidPhone(phone) {
+                if (!phone) return true; // Phone is optional
+                const re = /^[\+]?[1-9][\d\s\-\(\)]{8,20}$/;
+                return re.test(phone.replace(/[\s\-\(\)]/g, ''));
+            }
+
+            // Name validation
+            function isValidName(name) {
+                return name && name.trim().length >= 2 && name.trim().length <= 50;
+            }
+
+            // Message validation
+            function isValidMessage(message) {
+                return message && message.trim().length >= 20 && message.trim().length <= 1000;
+            }
+
+            // Show field error
+            function showFieldError(fieldId, message) {
+                const field = document.getElementById(fieldId);
+                const formGroup = field.closest('.form-group');
+                const errorDiv = formGroup.querySelector('.error-message');
+                
+                formGroup.classList.add('invalid');
+                if (message) {
+                    errorDiv.textContent = message;
+                }
+            }
+
+            // Clear field error
+            function clearFieldError(fieldId) {
+                const field = document.getElementById(fieldId);
+                const formGroup = field.closest('.form-group');
+                formGroup.classList.remove('invalid');
+            }
+
+            // Real-time validation
+            const formFields = ['firstName', 'lastName', 'email', 'phone', 'serviceType', 'message'];
+            
+            formFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                field.addEventListener('blur', function() {
+                    validateField(fieldId);
+                });
+                
+                field.addEventListener('input', function() {
+                    clearFieldError(fieldId);
+                });
+            });
+
+            function validateField(fieldId) {
+                const field = document.getElementById(fieldId);
+                const value = field.value.trim();
+                
+                switch(fieldId) {
+                    case 'firstName':
+                    case 'lastName':
+                        if (!isValidName(value)) {
+                            showFieldError(fieldId, 'Please enter a valid name (2-50 characters)');
+                            return false;
+                        }
+                        break;
+                    case 'email':
+                        if (!value) {
+                            showFieldError(fieldId, 'Email address is required');
+                            return false;
+                        }
+                        if (!isValidEmail(value)) {
+                            showFieldError(fieldId, 'Please enter a valid email address');
+                            return false;
+                        }
+                        break;
+                    case 'phone':
+                        if (value && !isValidPhone(value)) {
+                            showFieldError(fieldId, 'Please enter a valid phone number');
+                            return false;
+                        }
+                        break;
+                    case 'serviceType':
+                        if (!value) {
+                            showFieldError(fieldId, 'Please select a service type');
+                            return false;
+                        }
+                        break;
+                    case 'message':
+                        if (!isValidMessage(value)) {
+                            showFieldError(fieldId, 'Please provide project details (20-1000 characters)');
+                            return false;
+                        }
+                        break;
+                }
+                
+                clearFieldError(fieldId);
+                return true;
+            }
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const spinner = submitBtn.querySelector('.spinner');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Rate limiting
+            let lastSubmission = 0;
+            const RATE_LIMIT = 5000; // 5 seconds between submissions
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Rate limiting check
+                const now = Date.now();
+                if (now - lastSubmission < RATE_LIMIT) {
+                    errorMessage.textContent = 'Please wait before submitting again.';
+                    errorMessage.style.display = 'block';
+                    setTimeout(() => {
+                        errorMessage.style.display = 'none';
+                    }, 3000);
+                    return;
+                }
+
+                // Hide previous messages
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+
+                // Validate all fields
+                let isValid = true;
+                formFields.forEach(fieldId => {
+                    if (!validateField(fieldId)) {
+                        isValid = false;
+                    }
+                });
+
+                if (!isValid) {
+                    errorMessage.innerHTML = '<strong>Please fix the errors above before submitting.</strong>';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.disabled = true;
+                btnText.style.display = 'none';
+                spinner.style.display = 'inline-block';
+
+                // Get form data and sanitize
+                const formData = new FormData(contactForm);
+                const sanitizedData = {
+                    firstName: sanitizeInput(formData.get('firstName').trim()),
+                    lastName: sanitizeInput(formData.get('lastName').trim()),
+                    email: sanitizeInput(formData.get('email').trim()),
+                    phone: sanitizeInput(formData.get('phone').trim()),
+                    serviceType: sanitizeInput(formData.get('serviceType')),
+                    budget: sanitizeInput(formData.get('budget') || ''),
+                    timeline: sanitizeInput(formData.get('timeline') || ''),
+                    message: sanitizeInput(formData.get('message').trim()),
+                    newsletter: formData.get('newsletter') === 'on',
+                    timestamp: new Date().toISOString(),
+                    userAgent: navigator.userAgent,
+                    referrer: document.referrer
+                };
+
+                // Simulate form submission (in real implementation, send to your backend)
+                setTimeout(() => {
+                    // In production, you would send this data securely to your backend API
+                    console.log('Secure form submission:', sanitizedData);
+                    
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    contactForm.reset();
+                    charCount.textContent = '0 / 1000 characters';
+                    charCount.style.color = 'var(--text-light)';
+                    
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    btnText.style.display = 'inline';
+                    spinner.style.display = 'none';
+                    
+                    // Update rate limiting
+                    lastSubmission = Date.now();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                }, 2000); // Simulate network delay
+            });
+
+            // Business hours status (example implementation)
+            function updateBusinessStatus() {
+                const now = new Date();
+                const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+                const hour = now.getHours();
+                const studioStatus = document.getElementById('studioStatus');
+                
+                let isOpen = false;
+                
+                if (day >= 1 && day <= 5) { // Monday - Friday
+                    isOpen = hour >= 9 && hour < 18;
+                } else if (day === 6) { // Saturday
+                    isOpen = hour >= 10 && hour < 16;
+                }
+                
+                if (isOpen) {
+                    studioStatus.textContent = 'Currently Open';
+                    studioStatus.className = 'current-status status-open';
+                } else {
+                    studioStatus.textContent = 'Currently Closed';
+                    studioStatus.className = 'current-status status-closed';
+                }
+            }
+
+            // Update status on page load
+            updateBusinessStatus();
+            
+            // Update status every minute
+            setInterval(updateBusinessStatus, 60000);
+
+        })();
+    </script>
+</body>
+</html>

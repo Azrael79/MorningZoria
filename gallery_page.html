@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View our portfolio of custom clothing, handmade bags, quilts, and professional tool sharpening work. See the quality craftsmanship of Morning Zoria LLC.">
+    <meta name="keywords" content="portfolio, gallery, custom clothing examples, handmade bags, quilts, before after sharpening, craftsmanship examples">
+    <title>Gallery | Morning Zoria - Portfolio of Our Work</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e1e8ed;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filter Navigation */
+        .filter-nav {
+            background: var(--bg-light);
+            padding: 2rem 0;
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: white;
+            color: var(--text-dark);
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-image img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(231, 76, 60, 0.8), rgba(243, 156, 18, 0.8));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-content {
+            padding: 1.5rem;
+        }
+
+        .gallery-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-category {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 15px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 2001;
+        }
+
+        .modal-image {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+        }
+
+        .modal-info {
+            padding: 2rem;
+        }
+
+        /* Before/After Section */
+        .before-after-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+
+        .before-after-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .before-after-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 200px;
+        }
+
+        .before-image, .after-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .before-image img, .after-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 1rem 0.5rem 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .before-after-content {
+            padding: 1.5rem;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 4rem 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            color: var(--secondary-color);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .testimonial-service {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .filter-buttons {
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .before-after-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                max-width: 95%;
+                max-height: 95%;
+            }
+        }
+
+        /* Loading animation */
+        .gallery-item.loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">Morning Zoria</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Explore our portfolio of custom creations and precision sharpening work</p>
+        </div>
+    </section>
+
+    <!-- Filter Navigation -->
+    <nav class="filter-nav">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="clothing">Custom Clothing</button>
+                <button class="filter-btn" data-filter="bags">Handmade Bags</button>
+                <button class="filter-btn" data-filter="quilts">Quilts & Textiles</button>
+                <button class="filter-btn" data-filter="sharpening">Tool Sharpening</button>
+                <button class="filter-btn" data-filter="alterations">Alterations</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Gallery Section -->
+            <section class="gallery-section">
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Custom Clothing Items -->
+                    <div class="gallery-item" data-category="clothing">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23e3f2fd' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%231976d2'>Elegant Evening Gown</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%231976d2'>Custom Design</text></svg>" alt="Custom evening gown">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Custom Clothing</div>
+                            <h3 class="gallery-title">Elegant Evening Gown</h3>
+                            <p class="gallery-description">Custom-designed silk evening gown with intricate beadwork and perfect fit for a special occasion.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="clothing">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23f3e5f5' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%237b1fa2'>Wedding Dress</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%237b1fa2'>Bridal Couture</text></svg>" alt="Custom wedding dress">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Custom Clothing</div>
+                            <h3 class="gallery-title">Bridal Gown</h3>
+                            <p class="gallery-description">One-of-a-kind wedding dress featuring lace detailing and a flowing train, tailored to perfection.</p>
+                        </div>
+                    </div>
+
+                    <!-- Handmade Bags -->
+                    <div class="gallery-item" data-category="bags">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23e8f5e8' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%23388e3c'>Leather Handbag</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%23388e3c'>Handcrafted</text></svg>" alt="Handmade leather bag">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Handmade Bags</div>
+                            <h3 class="gallery-title">Premium Leather Handbag</h3>
+                            <p class="gallery-description">Handcrafted leather handbag with multiple compartments and durable construction for everyday use.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="bags">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23fff3e0' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%23f57c00'>Messenger Bag</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%23f57c00'>Canvas &amp; Leather</text></svg>" alt="Custom messenger bag">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Handmade Bags</div>
+                            <h3 class="gallery-title">Professional Messenger Bag</h3>
+                            <p class="gallery-description">Durable canvas and leather messenger bag perfect for work, with laptop compartment and adjustable strap.</p>
+                        </div>
+                    </div>
+
+                    <!-- Quilts & Textiles -->
+                    <div class="gallery-item" data-category="quilts">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23fce4ec' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%23c2185b'>Family Quilt</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%23c2185b'>Heirloom Quality</text></svg>" alt="Custom family quilt">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Quilts & Textiles</div>
+                            <h3 class="gallery-title">Family Heirloom Quilt</h3>
+                            <p class="gallery-description">Hand-stitched quilt featuring traditional patterns and family colors, designed to last generations.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="quilts">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23e1f5fe' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%230277bd'>Baby Quilt</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%230277bd'>Soft &amp; Safe</text></svg>" alt="Baby quilt">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Quilts & Textiles</div>
+                            <h3 class="gallery-title">Custom Baby Quilt</h3>
+                            <p class="gallery-description">Soft, hypoallergenic baby quilt with whimsical patterns and gentle colors for the nursery.</p>
+                        </div>
+                    </div>
+
+                    <!-- Alterations -->
+                    <div class="gallery-item" data-category="alterations">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23f8f9fa' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%236c757d'>Suit Alteration</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%236c757d'>Perfect Fit</text></svg>" alt="Suit alteration">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Alterations</div>
+                            <h3 class="gallery-title">Professional Suit Fitting</h3>
+                            <p class="gallery-description">Expert alterations to achieve the perfect fit for business and formal wear.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="alterations">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23fff8e1' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%23f9a825'>Dress Hemming</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%23f9a825'>Precision Work</text></svg>" alt="Dress hemming">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Alterations</div>
+                            <h3 class="gallery-title">Dress Hemming & Adjustments</h3>
+                            <p class="gallery-description">Precise hemming and adjustments to ensure your dresses fit perfectly and flatter your figure.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sharpening Services -->
+                    <div class="gallery-item" data-category="sharpening">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23f3e5f5' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%237b1fa2'>Sharp Knives</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%237b1fa2'>Professional Edge</text></svg>" alt="Sharpened kitchen knives">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Tool Sharpening</div>
+                            <h3 class="gallery-title">Kitchen Knife Restoration</h3>
+                            <p class="gallery-description">Professional sharpening service that restores dull kitchen knives to razor-sharp condition.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="sharpening">
+                        <div class="gallery-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23e8f5e8' width='300' height='250'/><text x='50%' y='45%' font-size='16' text-anchor='middle' dy='.3em' fill='%23388e3c'>Garden Tools</text><text x='50%' y='55%' font-size='12' text-anchor='middle' dy='.3em' fill='%23388e3c'>Like New</text></svg>" alt="Sharpened garden tools">
+                            <div class="gallery-overlay">View Details</div>
+                        </div>
+                        <div class="gallery-content">
+                            <div class="gallery-category">Tool Sharpening</div>
+                            <h3 class="gallery-title">Garden Tool Sharpening</h3>
+                            <p class="gallery-description">Precision sharpening for pruning shears, loppers, and other garden tools for optimal performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Before/After Section -->
+            <section class="before-after-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Before & After</h2>
+                        <p>See the transformation our sharpening services provide</p>
+                    </div>
+                    
+                    <div class="before-after-grid">
+                        <div class="before-after-item">
+                            <div class="before-after-images">
+                                <div class="before-image">
+                                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%23ffcdd2' width='200' height='200'/><text x='50%' y='45%' font-size='14' text-anchor='middle' dy='.3em' fill='%23d32f2f'>Dull Knife</text><text x='50%' y='55%' font-size='10' text-anchor='middle' dy='.3em' fill='%23d32f2f'>Worn Edge</text></svg>" alt="Dull knife before sharpening">
+                                    <div class="image-label">Before</div>
+                                </div>
+                                <div class="after-image">
+                                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%23c8e6c9' width='200' height='200'/><text x='50%' y='45%' font-size='14' text-anchor='middle' dy='.3em' fill='%23388e3c'>Sharp Knife</text><text x='50%' y='55%' font-size='10' text-anchor='middle' dy='.3em' fill='%23388e3c'>Perfect Edge</text></svg>" alt="Sharp knife after sharpening">
+                                    <div class="image-label">After</div>
+                                </div>
+                            </div>
+                            <div class="before-after-content">
+                                <h3 class="gallery-title">Chef's Knife Restoration</h3>
+                                <p class="gallery-description">This chef's knife was completely dull and struggled to cut tomatoes. After our professional sharpening, it effortlessly slices through paper.</p>
+                            </div>
+                        </div>
+
+                        <div class="before-after-item">
+                            <div class="before-after-images">
+                                <div class="before-image">
+                                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%23fff3e0' width='200' height='200'/><text x='50%' y='45%' font-size='14' text-anchor='middle' dy='.3em' fill='%23f57c00'>Dull Scissors</text><text x='50%' y='55%' font-size='10' text-anchor='middle' dy='.3em' fill='%23f57c00'>Bent & Worn</text></svg>" alt="Dull scissors before sharpening">
+                                    <div class="image-label">Before</div>
+                                </div>
+                                <div class="after-image">
+                                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%23e1f5fe' width='200' height='200'/><text x='50%' y='45%' font-size='14' text-anchor='middle' dy='.3em' fill='%230277bd'>Sharp Scissors</text><text x='50%' y='55%' font-size='10' text-anchor='middle' dy='.3em' fill='%230277bd'>Like New</text></svg>" alt="Sharp scissors after sharpening">
+                                    <div class="image-label">After</div>
+                                </div>
+                            </div>
+                            <div class="before-after-content">
+                                <h3 class="gallery-title">Fabric Scissors Revival</h3>
+                                <p class="gallery-description">These fabric scissors had become so dull they were crushing fabric instead of cutting. Now they cut cleanly through multiple layers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials-section">
+                <div class="section-title">
+                    <h2>What Our Customers Say</h2>
+                    <p>Real feedback from satisfied customers</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">The custom dress Natalya made for my daughter's wedding was absolutely perfect. Every detail was exactly as we envisioned, and the quality is incredible.</p>
+                        <div class="testimonial-author">Sarah M.</div>
+                        <div class="testimonial-service">Custom Wedding Dress</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Sergey sharpened my grandmother's sewing scissors and they're like brand new! I can't believe the difference. Professional service and fair pricing.</p>
+                        <div class="testimonial-author">Michael R.</div>
+                        <div class="testimonial-service">Scissor Sharpening</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">The quilt they made for our new baby is beautiful and so well-crafted. It's going to be a family heirloom for sure. Highly recommend their work!</p>
+                        <div class="testimonial-author">Jennifer L.</div>
+                        <div class="testimonial-service">Custom Baby Quilt</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>See something you like? Let's discuss how we can create something special for you or bring your tools back to life.</p>
+            <a href="contact.html" class="btn btn-secondary">Get a Quote</a>
+            <a href="services.html" class="btn btn-secondary">View Services</a>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-content">
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-info" id="modalInfo">
+                <div class="gallery-category" id="modalCategory"></div>
+                <h3 class="gallery-title" id="modalTitle"></h3>
+                <p class="gallery-description" id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Morning Zoria LLC</h3>
+                    <p>Combining creativity with practicality through expert craftsmanship and precision tool sharpening since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="index.html">Home</a><br>
+                       <a href="about.html">About Us</a><br>
+                       <a href="services.html">Services</a><br>
+                       <a href="gallery.html">Gallery</a><br>
+                       <a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p>Custom Clothing<br>Handmade Bags<br>Quilts & Textiles<br>Knife Sharpening<br>Scissor Sharpening</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@morningzoria.com<br>Phone: (555) 123-4567<br>By appointment only</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Morning Zoria LLC. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', function() {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                navLinks.style.borderRadius = '0 0 10px 10px';
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalImage = document.getElementById('modalImage');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('.gallery-image img');
+                const category = this.querySelector('.gallery-category').textContent;
+                const title = this.querySelector('.gallery-title').textContent;
+                const description = this.querySelector('.gallery-description').textContent;
+
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+                modalCategory.textContent = category;
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Keyboard navigation for modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Security measures
+        (function() {
+            'use strict';
+            
+            window.addEventListener('error', function(e) {
+                console.error('Script error detected:', e.error);
+            });
+
+            function sanitizeInput(input) {
+                const div = document.createElement('div');
+                div.textContent = input;
+                return div.innerHTML;
+            }
+
+            window.sanitizeInput = sanitizeInput;
+        })();
+
+        // Add smooth transitions for gallery items
+        galleryItems.forEach(item => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+            item.style.transition = 'all 0.3s ease';
+        });
+    </script>
+</body>
+</html>

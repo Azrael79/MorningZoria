@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional custom sewing services and expert knife sharpening. Custom clothing, bags, quilts, alterations, and precision tool sharpening services.">
+    <meta name="keywords" content="custom sewing services, knife sharpening, scissor sharpening, alterations, custom clothing, quilts, bags, professional sharpening">
+    <title>Our Services | Morning Zoria - Custom Sewing & Professional Sharpening</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e1e8ed;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+            --success-color: #27ae60;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Service Navigation */
+        .service-nav {
+            background: var(--bg-light);
+            padding: 2rem 0;
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+        }
+
+        .service-nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .service-nav-links a {
+            padding: 10px 20px;
+            background: white;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .service-nav-links a:hover, .service-nav-links a.active {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .section {
+            margin-bottom: 5rem;
+            scroll-margin-top: 150px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Service Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .service-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .service-list li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Process Section */
+        .process-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+            margin: 3rem 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .process-step h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 4rem 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--secondary-color);
+            position: relative;
+        }
+
+        .pricing-card.featured::before {
+            content: 'POPULAR';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .price-range {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: white;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .faq-answer.active {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 300px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .service-nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">Morning Zoria</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Professional custom sewing and expert tool sharpening services tailored to your needs</p>
+        </div>
+    </section>
+
+    <!-- Service Navigation -->
+    <nav class="service-nav">
+        <div class="container">
+            <ul class="service-nav-links">
+                <li><a href="#sewing" class="service-nav-link">Custom Sewing</a></li>
+                <li><a href="#sharpening" class="service-nav-link">Tool Sharpening</a></li>
+                <li><a href="#process" class="service-nav-link">Our Process</a></li>
+                <li><a href="#pricing" class="service-nav-link">Pricing</a></li>
+                <li><a href="#faq" class="service-nav-link">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Sewing Services Section -->
+            <section id="sewing" class="section">
+                <div class="section-title">
+                    <h2>Custom Sewing & Tailoring</h2>
+                    <p>Expert craftsmanship for all your custom clothing, accessory, and textile needs</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">👗</div>
+                        <h3>Custom Clothing</h3>
+                        <p>From elegant dresses to everyday wear, we create custom clothing that fits perfectly and reflects your personal style.</p>
+                        <ul class="service-list">
+                            <li>Evening gowns and formal wear</li>
+                            <li>Business and casual clothing</li>
+                            <li>Wedding dresses and bridal wear</li>
+                            <li>Children's clothing</li>
+                            <li>Costume and theatrical wear</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">✂️</div>
+                        <h3>Alterations & Repairs</h3>
+                        <p>Professional alterations to ensure your existing clothing fits perfectly and lasts longer.</p>
+                        <ul class="service-list">
+                            <li>Hemming and length adjustments</li>
+                            <li>Taking in or letting out garments</li>
+                            <li>Zipper and button replacement</li>
+                            <li>Hole and tear repairs</li>
+                            <li>Style modifications</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">👜</div>
+                        <h3>Handmade Bags & Accessories</h3>
+                        <p>Unique, functional bags and accessories crafted with attention to detail and quality materials.</p>
+                        <ul class="service-list">
+                            <li>Purses and handbags</li>
+                            <li>Laptop and messenger bags</li>
+                            <li>Tote bags and shopping bags</li>
+                            <li>Cosmetic and travel pouches</li>
+                            <li>Custom accessories</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🏠</div>
+                        <h3>Quilts & Home Textiles</h3>
+                        <p>Beautiful, functional quilts and home textiles that add warmth and style to your living space.</p>
+                        <ul class="service-list">
+                            <li>Custom quilts and bedspreads</li>
+                            <li>Throw pillows and cushions</li>
+                            <li>Curtains and window treatments</li>
+                            <li>Table runners and placemats</li>
+                            <li>Decorative wall hangings</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sharpening Services Section -->
+            <section id="sharpening" class="section">
+                <div class="section-title">
+                    <h2>Professional Tool Sharpening</h2>
+                    <p>Precision sharpening services to restore your tools to like-new condition</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔪</div>
+                        <h3>Kitchen Knives</h3>
+                        <p>Professional sharpening for all types of kitchen knives, from everyday cutlery to professional chef knives.</p>
+                        <ul class="service-list">
+                            <li>Chef's knives and santoku knives</li>
+                            <li>Paring and utility knives</li>
+                            <li>Bread and carving knives</li>
+                            <li>Cleaver and boning knives</li>
+                            <li>Ceramic knife sharpening</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Schedule Service</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">✂️</div>
+                        <h3>Scissors & Shears</h3>
+                        <p>Expert sharpening for scissors and shears of all types, ensuring clean cuts every time.</p>
+                        <ul class="service-list">
+                            <li>Household and office scissors</li>
+                            <li>Fabric and tailoring shears</li>
+                            <li>Hair cutting scissors</li>
+                            <li>Garden and pruning shears</li>
+                            <li>Industrial and craft scissors</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Schedule Service</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🌿</div>
+                        <h3>Garden Tools</h3>
+                        <p>Sharpening services for garden tools to help maintain your outdoor spaces with precision.</p>
+                        <ul class="service-list">
+                            <li>Pruning shears and loppers</li>
+                            <li>Hedge trimmers</li>
+                            <li>Hoes and cultivators</li>
+                            <li>Axes and hatchets</li>
+                            <li>Lawn mower blades</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Schedule Service</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🔨</div>
+                        <h3>Specialty Tools</h3>
+                        <p>Professional sharpening for woodworking, crafting, and specialty tools requiring precision edges.</p>
+                        <ul class="service-list">
+                            <li>Chisels and wood planes</li>
+                            <li>Craft and hobby knives</li>
+                            <li>Paper cutting blades</li>
+                            <li>Industrial cutting tools</li>
+                            <li>Custom tool sharpening</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Schedule Service</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section id="process" class="process-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Our Process</h2>
+                        <p>From consultation to completion, we ensure quality at every step</p>
+                    </div>
+                    
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h3>Consultation</h3>
+                            <p>We discuss your project needs, preferences, and timeline to ensure we understand your vision perfectly.</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h3>Assessment & Quote</h3>
+                            <p>For sewing projects, we take measurements and discuss materials. For sharpening, we evaluate tool condition.</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h3>Expert Craftsmanship</h3>
+                            <p>We apply our years of experience and attention to detail to deliver exceptional results that exceed expectations.</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h3>Quality Check & Delivery</h3>
+                            <p>Every project undergoes thorough quality inspection before delivery or pickup to ensure complete satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section id="pricing" class="pricing-section">
+                <div class="section-title">
+                    <h2>Service Pricing</h2>
+                    <p>Competitive rates for quality craftsmanship and professional service</p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Basic Alterations</h3>
+                        <p class="pricing-description">Simple hemming, basic adjustments, and minor repairs</p>
+                        <div class="price-range">$15 - $45</div>
+                        <ul class="service-list">
+                            <li>Hemming pants and skirts</li>
+                            <li>Taking in side seams</li>
+                            <li>Button and zipper replacement</li>
+                            <li>Basic repairs</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <h3 class="pricing-title">Custom Sewing</h3>
+                        <p class="pricing-description">Custom clothing, bags, and textile projects</p>
+                        <div class="price-range">$75 - $500+</div>
+                        <ul class="service-list">
+                            <li>Custom clothing design</li>
+                            <li>Handmade bags and accessories</li>
+                            <li>Quilts and home textiles</li>
+                            <li>Complex alterations</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Tool Sharpening</h3>
+                        <p class="pricing-description">Professional sharpening for all blade types</p>
+                        <div class="price-range">$5 - $25</div>
+                        <ul class="service-list">
+                            <li>Kitchen knives ($8-$15)</li>
+                            <li>Scissors and shears ($5-$12)</li>
+                            <li>Garden tools ($10-$20)</li>
+                            <li>Specialty tools ($15-$25)</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Schedule Service</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="faq-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Frequently Asked Questions</h2>
+                        <p>Common questions about our services and process</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">How long do custom sewing projects take?</button>
+                        <div class="faq-answer">
+                            <p>Timeline varies by project complexity. Simple alterations typically take 3-7 days, while custom clothing can take 2-6 weeks. We'll provide a detailed timeline during your consultation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">What materials do you work with?</button>
+                        <div class="faq-answer">
+                            <p>We work with virtually all fabric types including cotton, silk, wool, denim, leather, and synthetic materials. We can also source specific materials based on your project needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">How often should I have my knives sharpened?</button>
+                        <div class="faq-answer">
+                            <p>For home use, we recommend sharpening kitchen knives every 6-12 months. Professional chefs may need monthly sharpening. We'll assess your usage and provide personalized recommendations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">Do you offer pickup and delivery?</button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer local pickup and delivery service for your convenience. Contact us to arrange pickup for sharpening services or fabric consultations for sewing projects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">What if I'm not satisfied with the work?</button>
+                        <div class="faq-answer">
+                            <p>We guarantee your satisfaction. If you're not completely happy with our work, we'll make it right at no additional charge. Your satisfaction is our top priority.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Contact us today to discuss your project or schedule your tool sharpening service. We're here to help bring your vision to life!</p>
+            <a href="contact.html" class="btn btn-secondary">Get a Quote</a>
+            <a href="gallery.html" class="btn btn-secondary">View Our Work</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Morning Zoria LLC</h3>
+                    <p>Combining creativity with practicality through expert craftsmanship and precision tool sharpening since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="index.html">Home</a><br>
+                       <a href="about.html">About Us</a><br>
+                       <a href="services.html">Services</a><br>
+                       <a href="gallery.html">Gallery</a><br>
+                       <a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p>Custom Clothing<br>Handmade Bags<br>Quilts & Textiles<br>Knife Sharpening<br>Scissor Sharpening</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@morningzoria.com<br>Phone: (555) 123-4567<br>By appointment only</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Morning Zoria LLC. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', function() {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                navLinks.style.borderRadius = '0 0 10px 10px';
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Service navigation active states
+        const serviceNavLinks = document.querySelectorAll('.service-nav-link');
+        const sections = document.querySelectorAll('.section');
+
+        function updateActiveLink() {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 200;
+                if (window.pageYOffset >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            serviceNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+
+        // Smooth scrolling for service nav
+        serviceNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isActive = this.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Security measures
+        (function() {
+            'use strict';
+            
+            window.addEventListener('error', function(e) {
+                console.error('Script error detected:', e.error);
+            });
+
+            function sanitizeInput(input) {
+                const div = document.createElement('div');
+                div.textContent = input;
+                return div.innerHTML;
+            }
+
+            window.sanitizeInput = sanitizeInput;
+        })();
+    </script>
+</body>
+</html>
